@@ -6,23 +6,41 @@
     <title>Flex Box</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src='main.js'></script>
 </head>
 <body>
+    <div class="button-bar">
+        <input type="button" id='bt-row' value="row">
+        <input type="button" id='bt-row-reverse' value="row-reverse">
+        <input type="button" id='bt-column' value="column">
+        <input type="button" id='bt-column-reverse' value="column-reverse">
+    </div>
     <div class="container">
-        <div>
-            Teste 1
+        <div class="menu">
+            <div class="bordered-square">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
         </div>
-        <div>
-            Teste 2
-        </div>
-        <div>
-            teste 3
-        </div>
-        <div>
-            teste 4
+        <div class="content flex-column">
+            <div class="bordered-square">
+                Teste 1
+            </div>
+            <div class="bordered-square">
+                Teste 2
+            </div>
+            <div class="bordered-square">
+                teste 3
+            </div>
+            <div class="bordered-square">
+                teste 4
+            </div>
         </div>
     </div>
+    
     
 </body>
 </html>

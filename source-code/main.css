@@ -1,3 +1,63 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+}
+
+body {
+    background-color: #DDD;
+}
+
+ul {
+    list-style-type: none;
+}
+
 .container {
     display: flex;
+    flex-direction: row;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    width: 17rem;
+    background-color: #aaaaaa;
+}
+
+.content {
+    display: flex;
+    background-color: #999999;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-column-reverse {
+    flex-direction: column-reverse;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+.button-bar {
+    display: block;
+    height: 2.5rem;       
+}
+
+.button-bar input[type=button] {
+    color: black;
+}
+
+
+.bordered-square {
+
+    width: 15rem;
+    height: 15rem;
+    background-color: #00468b;
+    margin: 1rem;
 }
