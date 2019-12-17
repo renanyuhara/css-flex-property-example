@@ -11,9 +11,14 @@ ul {
     list-style-type: none;
 }
 
+button.active {
+    background-color: aqua;
+}
+
 .container {
     display: flex;
     flex-direction: row;
+    margin: 0 1rem;
 }
 
 .menu {
@@ -26,6 +31,11 @@ ul {
 .content {
     display: flex;
     background-color: #999999;
+    max-width: 600px;
+}
+
+.max-width-100 {
+    max-width: 100%;
 }
 
 .flex-column {
@@ -44,6 +54,41 @@ ul {
     flex-direction: row-reverse;
 }
 
+.flex-wrap-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+.flex-wrap-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+.flex-justify-flex-start {
+    justify-content: flex-start;
+}
+
+.flex-justify-flex-end {
+    justify-content: flex-end;
+}
+
+.flex-justify-center {
+    justify-content:center;
+}
+.flex-justify-space-between {
+    justify-content:space-between;
+}
+.flex-justify-space-around {
+    justify-content:space-around;
+}
+.flex-justify-space-evenly {
+    justify-content:space-evenly;
+}
+
+
+
 .button-bar {
     display: block;
     height: 2.5rem;       
@@ -55,7 +100,6 @@ ul {
 
 
 .bordered-square {
-
     width: 15rem;
     height: 15rem;
     background-color: #00468b;
