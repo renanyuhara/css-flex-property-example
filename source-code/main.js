@@ -78,7 +78,7 @@ $(document).ready(() => {
         $('.content').removeClass(FLEX_JUSTIFY_SPACE_AROUND);
         $('.content').removeClass(FLEX_JUSTIFY_SPACE_EVENLY);
 
-        $('.content').addClass(chosenClass);
+        addFlexClass(chosenClass);
     }
 
     $('#flex-justify-flex-start').on('click', () => {
@@ -105,4 +105,55 @@ $(document).ready(() => {
         removeAllFlexJustifyAndAddClass(FLEX_JUSTIFY_SPACE_EVENLY);
         setActiveButton('#flex-justify-space-evenly');
     })
+
+    const FLEX_ALIGN_ITEMS_STRETCH = 'flex-align-items-stretch';
+    const FLEX_ALIGN_ITEMS_FLEX_START = 'flex-align-items-flex-start';
+    const FLEX_ALIGN_ITEMS_FLEX_END = 'flex-align-items-flex-end';
+    const FLEX_ALIGN_ITEMS_CENTER = 'flex-align-items-center';
+    const FLEX_ALIGN_ITEMS_BASELINE = 'flex-align-items-baseline';
+
+    const removeAllFlexAlignItemsAndAddClass = (chosenClass) => {
+        $('.content').removeClass(FLEX_ALIGN_ITEMS_STRETCH);
+        $('.content').removeClass(FLEX_ALIGN_ITEMS_FLEX_START);
+        $('.content').removeClass(FLEX_ALIGN_ITEMS_FLEX_END);
+        $('.content').removeClass(FLEX_ALIGN_ITEMS_CENTER);
+        $('.content').removeClass(FLEX_ALIGN_ITEMS_BASELINE);
+
+        if (chosenClass === FLEX_ALIGN_ITEMS_STRETCH) {
+            $('.bordered-square').addClass('auto-height');
+        } else {
+            $('.bordered-square').removeClass('auto-height');
+        }
+
+        addFlexClass(chosenClass);
+    }
+
+    $('#flex-align-items-stretch').on('click', () => {
+        removeAllFlexAlignItemsAndAddClass(FLEX_ALIGN_ITEMS_STRETCH);
+    });
+    $('#flex-align-items-flex-start').on('click', () => {
+        removeAllFlexAlignItemsAndAddClass(FLEX_ALIGN_ITEMS_FLEX_START);
+    });
+    $('#flex-align-items-flex-end').on('click', () => {
+        removeAllFlexAlignItemsAndAddClass(FLEX_ALIGN_ITEMS_FLEX_END);
+    });
+    $('#flex-align-items-center').on('click', () => {
+        removeAllFlexAlignItemsAndAddClass(FLEX_ALIGN_ITEMS_CENTER);
+    });
+    $('#flex-align-items-baseline').on('click', () => {
+        removeAllFlexAlignItemsAndAddClass(FLEX_ALIGN_ITEMS_BASELINE);
+    });
+
+    //TODO: Implementar no Javascript
+    //TODO: Criar html de align-content
+/*
+flex-start
+flex-end
+center
+space-between
+space-around
+space-evenly
+stretch
+*/
+  
 });
