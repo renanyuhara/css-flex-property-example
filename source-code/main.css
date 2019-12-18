@@ -156,6 +156,14 @@ button.active {
     height: 20rem;
 }
 
+.large {
+    width: 20rem;
+}
+
+.short {
+    width: 10rem;
+}
+
 .auto-height {
     height: auto !important;
 }

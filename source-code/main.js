@@ -144,6 +144,54 @@ $(document).ready(() => {
         removeAllFlexAlignItemsAndAddClass(FLEX_ALIGN_ITEMS_BASELINE);
     });
 
+    const FLEX_ALIGN_CONTENT_FLEX_START = 'flex-align-content-flex-start';
+    const FLEX_ALIGN_CONTENT_FLEX_END = 'flex-align-content-flex-end';
+    const FLEX_ALIGN_CONTENT_CENTER = 'flex-align-content-center';
+    const FLEX_ALIGN_CONTENT_SPACE_BETWEEN = 'flex-align-content-space-between';
+    const FLEX_ALIGN_CONTENT_SPACE_AROUND = 'flex-align-content-space-around';
+    const FLEX_ALIGN_CONTENT_SPACE_EVENLY = 'flex-align-content-space-evenly';
+    const FLEX_ALIGN_CONTENT_STRETCH = 'flex-align-content-stretch';
+
+    const removeAllAlignContentAndAddClass = (chosenClass) => {
+        $('.content').removeClass(FLEX_ALIGN_CONTENT_FLEX_START);
+        $('.content').removeClass(FLEX_ALIGN_CONTENT_FLEX_END);
+        $('.content').removeClass(FLEX_ALIGN_CONTENT_CENTER);
+        $('.content').removeClass(FLEX_ALIGN_CONTENT_SPACE_BETWEEN);
+        $('.content').removeClass(FLEX_ALIGN_CONTENT_SPACE_AROUND);
+        $('.content').removeClass(FLEX_ALIGN_CONTENT_SPACE_EVENLY);
+        $('.content').removeClass(FLEX_ALIGN_CONTENT_STRETCH);
+
+        if (chosenClass === FLEX_ALIGN_CONTENT_STRETCH) {
+            $('.bordered-square').addClass('auto-height');
+        } else {
+            $('.bordered-square').removeClass('auto-height');
+        }
+
+        addFlexClass(chosenClass);
+    }
+
+    $('#flex-align-content-flex-start').on('click', () => {
+        removeAllAlignContentAndAddClass(FLEX_ALIGN_CONTENT_FLEX_START);
+    });
+    $('#flex-align-content-flex-end').on('click', () => {
+        removeAllAlignContentAndAddClass(FLEX_ALIGN_CONTENT_FLEX_END);
+    });
+    $('#flex-align-content-center').on('click', () => {
+        removeAllAlignContentAndAddClass(FLEX_ALIGN_CONTENT_CENTER);
+    });
+    $('#flex-align-content-space-between').on('click', () => {
+        removeAllAlignContentAndAddClass(FLEX_ALIGN_CONTENT_SPACE_BETWEEN);
+    });
+    $('#flex-align-content-space-around').on('click', () => {
+        removeAllAlignContentAndAddClass(FLEX_ALIGN_CONTENT_SPACE_AROUND);
+    });
+    $('#flex-align-content-space-evenly').on('click', () => {
+        removeAllAlignContentAndAddClass(FLEX_ALIGN_CONTENT_SPACE_EVENLY);
+    });
+    $('#flex-align-content-stretch').on('click', () => {
+        removeAllAlignContentAndAddClass(FLEX_ALIGN_CONTENT_STRETCH);
+    });
+
     //TODO: Implementar no Javascript
     //TODO: Criar html de align-content
 /*
@@ -154,6 +202,32 @@ space-between
 space-around
 space-evenly
 stretch
+
+flex-align-content-flex-start
+flex-align-content-flex-end
+flex-align-content-center
+flex-align-content-space-between
+flex-align-content-space-around
+flex-align-content-space-evenly
+flex-align-content-stretch
+
+#flex-align-content-flex-start
+#flex-align-content-flex-end
+#flex-align-content-center
+#flex-align-content-space-between
+#flex-align-content-space-around
+#flex-align-content-space-evenly
+#flex-align-content-stretch
+
+FLEX_ALIGN_CONTENT_FLEX_START
+FLEX_ALIGN_CONTENT_FLEX_END
+FLEX_ALIGN_CONTENT_CENTER
+FLEX_ALIGN_CONTENT_SPACE_BETWEEN
+FLEX_ALIGN_CONTENT_SPACE_AROUND
+FLEX_ALIGN_CONTENT_SPACE_EVENLY
+FLEX_ALIGN_CONTENT_STRETCH
+
+
 */
   
 });
